@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corrigir o caminho para o CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Link para a biblioteca de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Sistema de Tarefas</title>
+</head>
+<body>
+    <h1>Sistema de Tarefas</h1>
+    <div id="task-container">
+        <h2>Listagem das Tarefas</h2>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Custo</th>
+                    <th>Data Limite</th>
+                    <th>Ações</th>
+                    <th>Reordenar</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+                <!-- As tarefas serão carregadas aqui dinamicamente via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Formulário de inclusão de nova tarefa -->
+    <div class="form-container">
+        <h2>Nova Tarefa</h2>
+        <div class="form-fields">
+            <input type="text" id="newNome" placeholder="Nome da Tarefa">
+            <input type="number" id="newCusto" placeholder="Custo da Tarefa">
+            <input type="date" id="newDataLimite">
+        </div>
+        <button id="saveTaskButton">Salvar Tarefa</button>
+    </div>
+
+    <!-- Popup de edição de tarefa -->
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <h3>Editar Tarefa</h3>
+            <div class="form-fields">
+                <input type="text" id="editNome" placeholder="Nome da Tarefa">
+                <input type="number" id="editCusto" placeholder="Custo da Tarefa">
+                <input type="date" id="editDataLimite">
+            </div>
+            <button id="updateTaskButton">Atualizar</button>
+            <button id="cancelTaskButton">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
